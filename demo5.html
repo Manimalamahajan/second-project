@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="king name">
+  <meta name="keywords"  content="">
+  
+  <title>my js project</title>
+  <style>
+  
+  </style>
+</head>
+<body>
+<input type="search" id="myInput" onkeyup="myFunction()" placeholder="search for names......" title="find a name">
+
+<ul id="myUL">
+  <li>kesava</li>
+  <li>jwlant</li>
+
+  <li>santosh</li>
+  <li>mani</li>
+
+  <li>tulasi</li>
+  <li>vijay</li>
+  <li>krishna</li>
+  <li>vineesh</li>
+  <li>mala</li>
+  <li>shyamala</li>
+  <li>sita</li>
+</ul>
+
+<script>
+function myFunction() {
+
+var input = document.getElementById("myInput");
+ var filter = input.value.toUpperCase();
+ alert(filter);
+ var ul = document.getElementById("myUL");
+ var li = ul.getElementsByTagName("li");
+    for (var i = 0; i < li.length; i++) {
+        var a = li[i].innerHTML;
+        alert(a.toUpperCase().indexOf(filter));
+        if (a.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "block";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="king name">
+  <meta name="keywords"  content="">
+  
+  <title>Javascript</title>
+  <style>
+  
+  </style>
+</head>
+<body>
+<p id="clock"></p>
+
+<script>
+
+
+function clock(){
+var obj = new Date();
+var h = obj.getHours();
+var m = obj.getMinutes();
+var s = obj.getSeconds();
+
+h= update(h);
+m= update(m);
+s= update(s);
+
+document.getElementById("clock").innerText=h+":"+m+":"+s;
+setTimeout(function(){
+
+clock()
+
+},1000)
+
+}
+function update(h){
+if(h <10){
+
+return "0"+h;
+
+}
+else {
+
+return h;
+
+}
+
+}
+
+clock();
+
+
+</script>
+
+</body>
+</html>
